@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
 
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -70,7 +70,51 @@
     <main class="main">
         <!-- Home -->
         <section class="home section" id="home">
+            <img src="assets/images/home-bg.png" alt="image" class="home__bg">
+            <div class="home__blur"></div>
 
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h1 class="home__title">Travel <br> Around <br> The World</h1>
+                    <p class="home__description">
+                        Explore the best beautiful tourist spots in
+                        the countries and see the world on all your
+                        amazing adventures.
+                    </p>
+                    <a href="#destination" class="button button__opa-30">
+                        Explore The World
+                        <i class="ri-arrow-right-long-line"></i>
+                    </a>
+                </div>
+
+                <div class="home__swiper swiper">
+                    <div class="swiper-wrapper">
+                        <article class="home__article swiper-slide">
+                            <img src="assets/images/home-img-1.png" alt="image" class="home__img">
+                        </article>
+
+                        <article class="home__article swiper-slide">
+                            <img src="assets/images/home-img-2.png" alt="image" class="home__img">
+                        </article>
+
+                        <article class="home__article swiper-slide">
+                            <img src="assets/images/home-img-3.png" alt="image" class="home__img">
+                        </article>
+
+                        <article class="home__article swiper-slide">
+                            <img src="assets/images/home-img-4.png" alt="image" class="home__img">
+                        </article>
+                    </div>
+
+                    <!-- Navigation buttons -->
+                    <div class="swiper-button-prev">
+                        <i class="ri-arrow-left-long-line"></i>
+                    </div>
+                    <div class="swiper-button-next">
+                        <i class="ri-arrow-right-long-line"></i>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Destination-->
@@ -96,11 +140,11 @@
     </footer>
 
     <!-- Scroll Up -->
-    
+
     <!-- Scroll Reveal -->
 
     <!-- Swiper JS -->
-
+    <script src="assets/js/swiper-bundle.min.js"></script>
     <!-- Main JS-->
     <script src="assets/js/main.js"></script>
 </body>
