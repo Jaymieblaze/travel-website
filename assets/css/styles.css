@@ -105,11 +105,38 @@ img {
 
 /*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
+.dark-theme {
+  --title-color: hsl(220, 8%, 90%);
+  --text-color: hsl(220, 8%, 70%);
+  --body-color: hsl(220, 8%, 8%);
+  --container-color: hsl(220, 8%, 12%);
+  --opacity-color-30: hsla(0, 0%, 15%, 0.3);
+  --opacity-color-20: hsla(0, 0%, 15%, 0.2);
+}
 
 /*========== 
 	Color changes in some parts of 
 	the website, in dark theme
 ==========*/
+.dark-theme .bg-header .nav__logo img {
+  filter: initial;
+}
+
+.dark-theme .bg-header {
+  box-shadow: 0 8px 16px hsla(0, 0%, 0%, .4);
+}
+
+.dark-theme .scrollup {
+  background-color: var(--container-color);
+}
+
+.dark-theme::-webkit-scrollbar {
+  background-color: hsl(220, 6%, 15%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb {
+  background-color: hsl(220, 6%, 40%);
+}
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -242,7 +269,7 @@ img {
 /* Change background header */
 .bg-header {
   background-color: var(--body-color);
-  box-shadow: 0 8px 16px hsla(0, 0%, 0%, .1);
+  box-shadow: 0 8px 16px hsla(0, 0%, 0%, 0.1);
 }
 
 .bg-header :is(.nav__logo, .nav__toggle, .nav__theme) {
@@ -254,6 +281,9 @@ img {
 }
 
 /* Active link */
+.active-link::after {
+  width: 60%;
+}
 
 /*=============== HOME ===============*/
 .home {
@@ -320,10 +350,10 @@ img {
   backdrop-filter: blur(24px);
   width: 2rem;
   height: 2rem;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   top: initial;
   bottom: 1.25rem;
-  transition: background-color .4s;
+  transition: background-color 0.4s;
 }
 
 .home__swiper .swiper-button-prev {
@@ -376,7 +406,7 @@ img {
 }
 
 .destination__img {
-  transition: transform .4s;
+  transition: transform 0.4s;
 }
 
 .destination__data {
@@ -389,9 +419,9 @@ img {
   backdrop-filter: blur(24px);
   color: var(--white-color);
   display: grid;
-  row-gap: .25rem;
+  row-gap: 0.25rem;
   border-radius: 1.5rem;
-  transition: background-color .4s;
+  transition: background-color 0.4s;
 }
 
 .destination__subtitle {
@@ -402,7 +432,7 @@ img {
 .destination__country {
   display: flex;
   align-items: center;
-  column-gap: .25rem;
+  column-gap: 0.25rem;
 }
 
 .destination__country i {
@@ -416,7 +446,6 @@ img {
 .destination__card:hover .destination__img {
   transform: scale(1.2);
 }
-
 
 /*=============== TESTIMONIAL ===============*/
 .testimonial__container {
@@ -434,14 +463,14 @@ img {
   background-color: var(--container-color);
   border-radius: 0 0 1.5rem 1.5rem;
   margin-inline: initial;
-  transition: background-color .4s;
+  transition: background-color 0.4s;
 }
 
 .testimonial__card {
   padding: 2.5rem 2rem 3rem 1.25rem;
 }
 
-.testimonial__title{
+.testimonial__title {
   font-size: var(--h2-font-size);
   color: var(--title-color);
   margin-bottom: 1.5rem;
@@ -454,7 +483,7 @@ img {
 .testimonial__profile {
   display: flex;
   align-items: center;
-  column-gap: .5rem;
+  column-gap: 0.5rem;
 }
 
 .testimonial__profile img {
@@ -462,10 +491,10 @@ img {
   border-radius: 50%;
 }
 
-.testimonial__info h3{
+.testimonial__info h3 {
   font-size: var(--normal-font-size);
   color: var(--title-color);
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 
 .testimonial__info p {
@@ -512,13 +541,15 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg,
-              hsla(0, 0%, 0%, 0) 70%,
-              hsla(0, 0%, 0%, 0.7) 100%);
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 0%, 0) 70%,
+    hsla(0, 0%, 0%, 0.7) 100%
+  );
 }
 
 .gallery__img {
-  transition: transform .4s;
+  transition: transform 0.4s;
 }
 
 .gallery__data {
@@ -533,7 +564,7 @@ img {
   font-family: var(--second-font);
 }
 
-.gallery__title{
+.gallery__title {
   font-size: var(--h2-font-size);
 }
 
@@ -541,18 +572,17 @@ img {
   transform: scale(1.2);
 }
 
-
 /*=============== JOIN ===============*/
 .join__container {
   row-gap: 3rem;
   padding-bottom: 3rem;
 }
 
-.join__data{
+.join__data {
   text-align: center;
 }
 
-.join__data .section__title{
+.join__data .section__title {
   margin-bottom: 1rem;
 }
 
@@ -570,8 +600,8 @@ img {
   background-color: var(--container-color);
   color: var(--text-color);
   padding: 1.5rem 1rem;
-  border-radius: .5rem;
-  transition: background-color .4s;
+  border-radius: 0.5rem;
+  transition: background-color 0.4s;
 }
 
 .join__button {
@@ -584,7 +614,6 @@ img {
   border-radius: 1.5rem;
   justify-self: center;
 }
-
 
 /*=============== FOOTER ===============*/
 .footer {
@@ -599,7 +628,7 @@ img {
 .footer__logo {
   display: inline-flex;
   align-items: center;
-  column-gap: .25rem;
+  column-gap: 0.25rem;
   justify-self: flex-start;
   color: var(--white-color);
   font-size: var(--h3-font-size);
@@ -619,7 +648,7 @@ img {
 
 .footer__links {
   display: grid;
-  row-gap: .75rem;
+  row-gap: 0.75rem;
 }
 
 .footer__link {
@@ -634,11 +663,11 @@ img {
 .footer__social-link {
   color: var(--white-color);
   font-size: 1.5rem;
-  transition: transform .4s;
+  transition: transform 0.4s;
 }
 
-.footer__social-link:hover{
-  transform: translateY(-.25rem);
+.footer__social-link:hover {
+  transform: translateY(-0.25rem);
 }
 
 .footer__copy {
@@ -649,21 +678,19 @@ img {
   font-size: var(--small-font-size);
 }
 
-
 /*=============== SCROLL BAR ===============*/
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 0.6rem;
   background-color: hsl(220, 6%, 80%);
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: hsl(220, 6%, 60%);
 }
 
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
   background-color: hsl(220, 6%, 50%);
 }
-
 
 /*=============== SCROLL UP ===============*/
 .scrollup {
@@ -671,26 +698,24 @@ img {
   right: 1rem;
   bottom: -50%;
   background-color: var(--body-color);
-  box-shadow: 0 8px 16px hsla(0, 0%, 0%, .1);
+  box-shadow: 0 8px 16px hsla(0, 0%, 0%, 0.1);
   color: var(--title-color);
   display: inline-flex;
   padding: 6px;
   font-size: 1.25rem;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   z-index: var(--z-tooltip);
-  transition: bottom .4s, transform .4s, background-color .4s;
+  transition: bottom 0.4s, transform 0.4s, background-color 0.4s;
 }
 
 .scrollup:hover {
-  transform: translateY(-.5rem);
+  transform: translateY(-0.5rem);
 }
-
 
 /* Show Scroll Up */
 .show-scroll {
   bottom: 3rem;
 }
-
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
